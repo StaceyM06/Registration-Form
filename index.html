@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script href="app.js"></script>
     <title>Registration Form</title>
 </head>
 <body>
@@ -21,7 +22,10 @@
                 <input id="email" name="email" type="email" required>
             </label>
             <label for="new-password">Enter a New Password: 
-                <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required>
+                <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" oninput="check()" required>
+            </label>
+            <label for="confirm-password">Confirm Your New Password: 
+                <input id="confirm-password" name="confirm-password" type="password" pattern="[a-z0-5]{8,}" oninput="check()" required>
             </label>
         </fieldset>
         <fieldset>
@@ -46,7 +50,7 @@
                 </select>
             </label>
             <label for="bio">Provide a bio: 
-                <textarea name="bio" id="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+                <textarea name="bio" id="bio" rows="3" cols="30" placeholder="My hobbies are..."></textarea>
             </label>
         </fieldset>
         <label for="terms-and-conditions">
